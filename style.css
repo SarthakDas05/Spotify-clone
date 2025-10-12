@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    list-style: none;
+}
+.body{
+    position: relative;
+}
+.left{
+    width: 25vw;
+    padding: 10px;
+
+}
+.right{
+    width: 75vw;
+    
+}
+.library{
+    background-color: rgb(26, 25, 25);
+
+}
+nav{
+    position: sticky;
+    top: 0;
+}
+.home{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+    gap: 20px;
+}
+.heading{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    gap: 15px;
+    padding: 23px 14px;
+    padding-top: 14px;
+    font-weight:700;
+    font-size: 16px;
+    align-items: center;
+}
+.heading img{
+    width: 30px;
+}
+
+.serach-recents ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.covertext{
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.home-search img{
+    width: 25px;
+    
+    padding: 8px;
+    border-radius: 25px;
+    background-color: rgb(221, 221, 221);
+}
+.home-search{
+    display: flex;
+    gap: 15px;
+}
+.search{
+    border: 1px solid red;
+    background-color: aliceblue;
+    width: 500px;
+    border-radius: 20px;
+
+}
+.right {
+    width: 75vw;
+    background-color: #121212;
+    padding: 20px 30px;
+    overflow-y: auto;
+}
+
+
+.profile{
+    display: flex;
+    gap: 20px;
+}
+
+.profileav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    border-radius: 50%;
+    background-color: #e8592c;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.recently ul li img{
+    width: 45px;
+}
+.recently ul li{
+    display: flex;
+    align-items: center;
+    border: 2px solid;
+}
+.recently ul{
+    padding: 15px 5px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 8px;
+}
+.music-pod ul{
+    display: flex;
+    flex-wrap:wrap;
+    padding: 15px;
+    gap: 15px;
+}
+.music-pod ul li{
+    border: 1px solid;
+    padding: 7px 10px;
+    border-radius: 25px;
+}
+
+
+.playlist-suggestion .cover ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 16px;
+}
+
+.playlist-suggestion .cover ul li {
+    background-color: #181818; /* A dark grey so we can see the boxes */
+    border: 2px solid red;     /* A thick red border for debugging */
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+.playlist-suggestion1 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.playlist-suggestion .cover ul,
+.playlist-suggestion1 .cover ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 16px;
+    padding-top: 10px;
+}
+
+/* This rule now targets BOTH sets of cards */
+.playlist-suggestion .cover ul li,
+.playlist-suggestion1 .cover ul li {
+    background-color: #181818;
+    height: 240px;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* This rule now targets BOTH sets of cards on hover */
+.playlist-suggestion .cover ul li:hover,
+.playlist-suggestion1 .cover ul li:hover {
+    background-color: #282828;
+}
+
+/* This rule now targets BOTH sets of images */
+.playlist-suggestion .cover ul li img,
+.playlist-suggestion1 .cover ul li img {
+    width: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+/* This rule now targets BOTH sets of titles */
+.playlist-suggestion .cover ul li h3,
+.playlist-suggestion1 .cover ul li h3 {
+    font-size: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* This rule now targets BOTH sets of descriptions */
+.playlist-suggestion .cover ul li p,
+.playlist-suggestion1 .cover ul li p {
+    font-size: 13px;
+    color: #a7a7a7;
+    flex-grow: 1;
+    overflow: hidden;
+}
+.cover {
+    padding: 15px 0px;
+}
+
+.player{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    z-index: 10;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.song-info{
+    display: flex;
+    gap: 15px;
+    padding: 0 15px;
+}
+.song-info img{
+    
+    width: 50px;
+    
+}
+.musicinteratct{
+    display: flex;
+    gap: 5px;
+}
+.bar img{
+    
+    width: 20px;
+}
+.queue img{
+    
+    width: 20px;
+    
+}
+.queue{
+    display: flex;
+    gap: 5px;
+    padding-right: 15px;
+}
+.bar1{
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+.bar1 input{
+    width:40VW;   
+    accent-color: black;
+}
+.bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.queue input{
+    
+    accent-color: black;
+    
+}
