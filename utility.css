@@ -7,10 +7,10 @@
     display: flex;
 }
 
-.justify-centre{
+.justify-center{
     justify-content: center;
 }
-.items-centre{
+.items-center{
     align-items: center;
 }
 .invert{
@@ -33,4 +33,10 @@
 }
 .p-1{
     padding: 10px;
+}
+.flex-col{
+    flex-direction: column;
+}
+.justify-between{
+    justify-content: space-between;
 }

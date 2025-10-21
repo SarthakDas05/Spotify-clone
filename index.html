@@ -11,12 +11,12 @@
 
 <body>
     <nav class="bg-black ">
-        <div class="home rounded invert">
+        <div class="home rounded invert flex justify-between">
             <div class="logo"><img src="logo.svg" alt="logo"></div>
-            <div class="home-search"><img src="home.svg" alt="">
+            <div class="home-search flex"><img src="home.svg" alt="">
                 <div class="search"></div>
             </div>
-            <div class="profile invert">
+            <div class="profile flex invert">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
@@ -36,7 +36,7 @@
                     <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
                     <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                 </svg>
-                <div class="profileav">
+                <div class="profileav flex justify-center items-center">
                     <span >A</span>
                 </div>
             </div>
@@ -46,12 +46,13 @@
     <div class="container flex bg-black">
 
         <div class="left border ">
-
+            
             <div class="library  m-1 p-1 rounded">
-                <div class="heading">Your Library</div>
+                <button class="invert"><img src="close.svg" id="close" alt=""></button>
+                <div class="heading flex items-center">Your Library</div>
                 <div class="suggest border"></div>
                 <div class="serach-recents">
-                    <ul>
+                    <ul class="flex">
                         <li>Search</li>
                         <li>Recents</li>
                     </ul>
@@ -68,8 +69,9 @@
 
         </div>
         <div class="right border ">
-            <div class="music-pod">
-                <ul>
+            <div class="music-pod flex">
+                <button class="invert"><img src="hamburger.svg" id="hamburger" alt=""></button>
+                <ul class="flex">
                     <li>All</li>
                     <li>Music</li>
                     <li>Podcasts</li>
@@ -95,7 +97,7 @@
                 </div>
 
             </div>
-            <div class="playlist-suggestion1">Recently played
+            <div class="playlist-suggestion1 flex flex-col">Recently played
                 <div class="cover">
                     <ul>
                         <li><img src="cover.jpg" alt=""></li>
@@ -111,23 +113,23 @@
     </div>
 
     <div class="foot">
-        <div class="player bg-black ">
-            <div class="song-info"><img src="cover.jpg" alt=""><div>
-                <p>Song Title</p>
-                <p>Artist name</p>
+        <div class="player flex bg-black justify-between items-center">
+            <div class="song-info flex"><img src="cover.jpg" alt="" id="player-cover-img"><div>
+                <p id="song-title">Song Title</p>
+                <p id="song-artist">Artist name</p>
             </div>
             </div>
-            <div class="bar invert">
-                <div class="musicinteratct">
+            <div class="bar invert flex items-center justify-center flex-col">
+                <div class="musicinteratct flex">
 
                     <img src="prevsong.svg" id="prev" alt="">
                     <img src="play.svg" id="play" alt="">
                     <img src="nextsong.svg" id="next">
                 </div><div class="bar1">
-                    <p>1:59</p><input type="range" max="100"></input></p>
+                    <span id="currentTime"></span><input type="range" max="100"></input><span id="totalDuration"></span>
                 </div>
             </div>
-            <div class="queue invert"><img src="music.svg" alt=""><img src="hamburger.svg" alt=""><img src="volume.svg" alt="">
+            <div class="queue invert flex"><img src="music.svg" alt=""><img src="hamburger.svg" alt=""><img src="volume.svg" id="mute" alt="">
                 <input type="range" max="100"></input>
             </div>
         </div>

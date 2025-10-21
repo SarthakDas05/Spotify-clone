@@ -27,49 +27,35 @@ nav{
 }
 .home{
     padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    
     gap: 20px;
 }
 .heading{
-    display: flex;
-    list-style: none;
+    
     width: 100%;
     gap: 15px;
     padding: 23px 14px;
     padding-top: 14px;
     font-weight:700;
     font-size: 16px;
-    align-items: center;
 }
 .heading img{
     width: 30px;
 }
 
 .serach-recents ul{
-    display: flex;
+    
     list-style: none;
     justify-content: space-between;
     padding: 15px 0;
 }
 
-.covertext{
-    padding: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
 .home-search img{
     width: 25px;
-    
     padding: 8px;
     border-radius: 25px;
     background-color: rgb(221, 221, 221);
 }
 .home-search{
-    display: flex;
     gap: 15px;
 }
 .search{
@@ -88,14 +74,10 @@ nav{
 
 
 .profile{
-    display: flex;
     gap: 20px;
 }
 
 .profileav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 32px;
     border-radius: 50%;
     background-color: #e8592c;
@@ -119,7 +101,6 @@ nav{
     gap: 8px;
 }
 .music-pod ul{
-    display: flex;
     flex-wrap:wrap;
     padding: 15px;
     gap: 15px;
@@ -144,10 +125,9 @@ nav{
     display: flex;
     flex-direction: column;
     padding-top: 10px;
+    position: relative;
 }
 .playlist-suggestion1 {
-    display: flex;
-    flex-direction: column;
     gap: 8px;
 }
 .playlist-suggestion .cover ul,
@@ -213,17 +193,13 @@ nav{
     position: fixed;
     bottom: 0;
     left: 0;
-    display: flex;
     width: 100%;
     height: 15vh;
     z-index: 10;
-    justify-items: center;
-    align-items: center;
     justify-content: space-between;
 
 }
 .song-info{
-    display: flex;
     gap: 15px;
     padding: 0 15px;
 }
@@ -233,7 +209,6 @@ nav{
     
 }
 .musicinteratct{
-    display: flex;
     gap: 5px;
 }
 .bar img{
@@ -254,18 +229,83 @@ nav{
     color: white;
     display: flex;
     flex-direction: row;
+    gap: 10px;
+    align-items: center;
 }
 .bar1 input{
     width:40VW;   
     accent-color: black;
 }
-.bar{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.bar1 span{
+    filter: invert(1);
 }
 .queue input{
     
     accent-color: black;
     
+}
+#hamburger{
+    display: none;
+}
+#close{
+    display: none;
+    position: absolute; /* Needed to place it top-right later */
+    top: 15px;         /* Adjust positioning as needed */
+    right: 15px;        /* Adjust positioning as needed */
+    width: 30px;       /* Give it a size */
+    height: 30px;      /* Give it a size */
+    cursor: pointer;
+}
+
+.card-play{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 45px;
+    background-color: green;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(10px); /* Slightly down */
+    transition: all 0.2s ease-out; /* Smooth transition */
+    cursor: pointer;
+}
+.card-play-icon{
+    width: 20px;
+    filter: invert(1);
+}
+.playlist-suggestion .cover ul li:hover .card-play {
+    opacity: 1; /* Make it visible */
+    transform: translateY(0); /* Move it back to original position */
+}
+
+@media (max-width:1200px) {
+    .left{
+        position: absolute;
+        left: -120%;
+        z-index: 10;
+        transition: left 0.3s ease-in-out;
+        background-color: black;
+        width: 370px;
+        top: 0;
+    }
+    .right{
+        width: 100vw;
+    }
+
+    #hamburger {
+        display: block; /* Or inline-block, flex, etc. */
+        cursor: pointer;
+        /* Add any specific mobile positioning/sizing if needed */
+        width: 30px; /* Example size */
+        height: 30px; /* Example size */
+    }
+    .left.left-panel-open #close {
+        display: block; /* Or inline-block */
+    }
+    .left.left-panel-open {
+    left: 0; /* Slide it onto the screen */
+}
 }
